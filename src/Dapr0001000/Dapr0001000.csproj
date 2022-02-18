@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- For this example, the following nuget package is not needed. -->
+    <!-- <PackageReference Include="Dapr.AspNetCore" Version="1.6.0" /> -->
+  </ItemGroup>
+
+</Project>
