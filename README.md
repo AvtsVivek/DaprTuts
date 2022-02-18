@@ -19,7 +19,7 @@ http://localhost:9999/overview
 
 1. [Install the extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-dapr)
 
-2. ![Dapr Extension for Visual Studio Code](src/images/VsCodeDaprExtension.jpg "Dapr Extension for Visual Studio Code").
+2. ![Dapr Extension for Visual Studio Code](/src/Images/VsCodeDaprExtension.jpg "Dapr Extension for Visual Studio Code").
 
 >The dapr end point in general is as follows
 
