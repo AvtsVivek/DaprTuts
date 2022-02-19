@@ -75,11 +75,11 @@
     ],
     "compounds": [
         {
-            "name": ".NET Core Launch (web) on edge browser",
+            "name": "compound netcore on edge browser",
             "configurations": [".NET Core Launch (web)", "Run on edge"]
         },
         {
-            "name": "Run daperized app on edge",
+            "name": "compound daperized app on edge",
             "configurations": [".NET Core Launch (web) with Dapr", "Run dapr app on edge"]
         }
     ]
