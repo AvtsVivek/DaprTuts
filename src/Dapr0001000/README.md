@@ -17,9 +17,9 @@ To access the app
 
 1. http://localhost:5000/hello
 
-Now to daparise it do the following code changes.
-1. Ensure docker is running
-2. do **dapr init**
+Now to daparise it do the following.
+1. Ensure docker is running.
+2. Run **dapr init** command.
 3. Run the powershell **launch.ps1** or the following command
 
 ```sh
@@ -31,7 +31,7 @@ Now to access the app
 1. http://localhost:5000/hello
 2. http://localhost:5010/v1.0/invoke/hello-world/method/hello
 
-To send those reqwuets, use can use the start.http file.
+To send those requets, use can use the start.http file.
 
 With the dapr command that we just ran, all that we are doing is ask dapr to run our app.
 Then dapr will provide us with an end point that looks as follows.
