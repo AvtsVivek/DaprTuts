@@ -35,6 +35,14 @@
             "program": "${workspaceFolder}\\bin\\www",
             "preLaunchTask": "daprd-debug",
             "postDebugTask": "daprd-down"
+        },
+        {
+            "type": "pwa-msedge",
+            "name": "Run dapr app on edge",
+            "request": "launch",
+            // The port below comes from the dapr task. See the tasks file and look for task with type daprd
+            "url": "http://localhost:39108/v1.0/invoke/app/method/users",
+            //http://localhost:<port-no>/v1.0/invoke/<app-id>/method/<method-name
         }
     ],
     "compounds": [
@@ -45,6 +53,10 @@
         {
             "name": "compound users page on edge",
             "configurations": ["Launch Program", "launch users page on ms edge"]
+        },
+        {
+            "name": "compound dpar page on edge",
+            "configurations": ["Launch Program with Dapr", "Run dapr app on edge"]
         }
     ]
 }

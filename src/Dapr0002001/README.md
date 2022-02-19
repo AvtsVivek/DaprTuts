@@ -54,3 +54,15 @@ Then invoke the post application. For json payload you can use
 
 The events stuff is not working.
 https://youtu.be/OtbYCBt9C34?t=757
+
+![Dapr Invoke App post](DaprInvoke.jpg "Dapr Invoke App post").
+
+Invoke
+
+![Dapr Invoke App post](DaprInvokePost.jpg "Dapr Invoke App post").
+
+![Dapr Invoke App jsoninput](DaprInvokePostJsonInput.jpg "Dapr Invoke App post")
+
+Debugger
+
+![Dapr Invoke App jsoninput](DaprInvokePostJsonInputBreakPoint.jpg "Dapr Invoke App post")
