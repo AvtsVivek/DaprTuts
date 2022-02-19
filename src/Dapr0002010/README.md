@@ -4,7 +4,7 @@ Dapr Example
 
 >This demonistrates how to debug a dapr node app but within the context of dapr.
 
-## Dpr0002001
+## Dpr0002010
 This is taken from 
 
 https://www.youtube.com/watch?v=OtbYCBt9C34
@@ -17,7 +17,7 @@ npm install
 
 npm start
 
-Browse to http://localhost:3000/
+Browse to http://localhost:3001/
 
 Add the following in users.js file.
 
@@ -31,7 +31,7 @@ In the activity bar, select debug tab(Ctrl + Shift + D) and create a launch.json
 Select Node.js lauch configuration. 
 
 Start the debugging.
-Place a break point in users get method and then browse to http://localhost:3000/users
+Place a break point in users get method and then browse to http://localhost:3001/users
 
 To add more launch configurations.
 In the command pallatte, select Debug: Open link
