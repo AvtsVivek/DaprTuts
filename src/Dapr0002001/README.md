@@ -55,6 +55,10 @@ Then invoke the post application. For json payload you can use
 The events stuff is not working.
 https://youtu.be/OtbYCBt9C34?t=757
 
+The format of the dapr uri
+
+http://localhost:<port-no>/v1.0/invoke/<app-id>/method/<method-name>
+
 ![Dapr Invoke App post](DaprInvoke.jpg "Dapr Invoke App post").
 
 Invoke
