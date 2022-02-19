@@ -55,3 +55,19 @@ Press Ctrl + Shift + P and type dapr
 ![Scafold Dapr Tasks](DaprScafoldDaprTasks.jpg "Scafold Dapr Tasks").
 
 .NET Core Launch (web) with Dapr
+
+http://localhost:<port-no>/v1.0/invoke/<app-id>/method/<method-name
+
+
+Place a break point in Controller.
+
+Select Dapr tab on the activity bar. Then rightclick the app and then do get or post.
+
+
+To open the dashboard, use the dapr extension command platte. Type dapr show dashboard
+
+![Dapr Invoke App](DaprInvokeApp.jpg "Dapr Invoke App").
+
+Type the url here.
+
+![Dapr Invoke App get](DaprInvokeGetUri.jpg "Dapr Invoke App get").

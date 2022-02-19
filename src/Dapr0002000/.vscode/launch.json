@@ -50,11 +50,12 @@
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
-                "uriFormat": "%s/swagger"
-            },
+            // https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#starting-a-web-browser
+            //"serverReadyAction": {
+                //"action": "openExternally",
+                //"pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+                //,"uriFormat": "%s/swagger"
+            //},
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
@@ -62,12 +63,24 @@
                 "/Views": "${workspaceFolder}/Views"
             },
             "postDebugTask": "daprd-down"
-        }
+        },
+        {
+            "type": "pwa-msedge",
+            "name": "Run dapr app on edge",
+            "request": "launch",
+            // The port below comes from the dapr task. See the tasks file and look for task with type daprd
+            "url": "http://localhost:53108/v1.0/invoke/app/method/swagger",
+            //http://localhost:<port-no>/v1.0/invoke/<app-id>/method/<method-name
+        },
     ],
     "compounds": [
         {
             "name": ".NET Core Launch (web) on edge browser",
             "configurations": [".NET Core Launch (web)", "Run on edge"]
+        },
+        {
+            "name": "Run daperized app on edge",
+            "configurations": [".NET Core Launch (web) with Dapr", "Run dapr app on edge"]
         }
     ]
 }

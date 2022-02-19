@@ -17,6 +17,8 @@ npm install
 
 npm start
 
+Browse to http://localhost:3000/
+
 Add the following in users.js file.
 
 ```js

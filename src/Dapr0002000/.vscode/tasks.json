@@ -40,7 +40,10 @@
         {
             "appId": "app",
             "appPort": 5073,
+            // put your app port and dapr port here.
+            // https://docs.dapr.io/developing-applications/ides/vscode/vscode-how-to-debug-multiple-dapr-apps/#step-2-configure-taskjson
             "label": "daprd-debug",
+            "httpPort": 53108,
             "type": "daprd",
             "dependsOn": "build"
         },

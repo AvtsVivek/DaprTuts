@@ -15,13 +15,13 @@
         },
         {
             "type": "pwa-msedge",
-            "name": "http://localhost:3000/",
+            "name": "launch express app on ms edge",
             "request": "launch",
             "url": "http://localhost:3000/"
         },
         {
             "type": "pwa-msedge",
-            "name": "http://localhost:3000/users",
+            "name": "launch users page on ms edge",
             "request": "launch",
             "url": "http://localhost:3000/users"
         },
@@ -35,6 +35,16 @@
             "program": "${workspaceFolder}\\bin\\www",
             "preLaunchTask": "daprd-debug",
             "postDebugTask": "daprd-down"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "compound app on edge",
+            "configurations": ["Launch Program", "launch express app on ms edge"]
+        },
+        {
+            "name": "compound users page on edge",
+            "configurations": ["Launch Program", "launch users page on ms edge"]
         }
     ]
 }
