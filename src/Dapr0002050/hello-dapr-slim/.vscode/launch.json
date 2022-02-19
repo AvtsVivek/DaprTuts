@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\app.js"
+        },
+        {
+            "type": "pwa-msedge",
+            "name": "Run on edge",
+            "request": "launch",
+            "url": "http://localhost:3000"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program with Dapr",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\app.js",
+            "preLaunchTask": "daprd-debug",
+            "postDebugTask": "daprd-down"
+        },
+        {
+            "type": "pwa-msedge",
+            "name": "Run dapr app on edge",
+            "request": "launch",
+            // The port below comes from the dapr task. See the tasks file and look for task with type daprd
+            "url": "http://localhost:19108/v1.0/invoke/app/method/",
+            //http://localhost:<port-no>/v1.0/invoke/<app-id>/method/<method-name
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Compound",
+            "configurations": ["Launch Program", "Run on edge"]
+        },
+        {
+            "name": "Compound dapr",
+            "configurations": ["Launch Program with Dapr", "Run dapr app on edge"]
+        }
+    ]
+}

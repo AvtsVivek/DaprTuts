@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"appId": "app",
+			"appPort": 3000,
+			// put your app port and dapr port here.
+            // https://docs.dapr.io/developing-applications/ides/vscode/vscode-how-to-debug-multiple-dapr-apps/#step-2-configure-taskjson
+            "httpPort": 19108,
+			"label": "daprd-debug",
+			"type": "daprd"
+		},
+		{
+			"appId": "app",
+			"label": "daprd-down",
+			"type": "daprd-down"
+		}
+	]
+}
