@@ -15,6 +15,7 @@ Do the following.
 First start docker
 Then initialize dapr with the following command
 dapr init
+Ensure state store is running as a docker container.
 Once it is initialized, there are several ways to run the app.
 
 Run the following command.

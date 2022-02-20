@@ -8,6 +8,7 @@ Console.WriteLine("Do the following.");
 Console.WriteLine("First start docker");
 Console.WriteLine("Then initialize dapr with the following command");
 Console.WriteLine("dapr init");
+Console.WriteLine("Ensure state store is running as a docker container.");
 Console.WriteLine("Once it is initialized, now run the following command.");
 Console.WriteLine("This will ask dapr to run this app.");
 Console.WriteLine("dapr run --app-id DaprCounter dotnet run");
@@ -24,8 +25,10 @@ if (!daprSideCarIsHealthy)
   Console.WriteLine("Ensure docker is running.");
   Console.WriteLine("Then verify that dapr is running.");
   Console.WriteLine("Start dapr by running dapr init command. Then try again.");
+  Console.WriteLine("Also you need to run this app with dapr and not directly.");
+  Console.WriteLine("Do not execute this app directly.");
   Console.WriteLine("Exiting...");
-  return;
+  //return;
 }
 
 
@@ -44,6 +47,16 @@ while (true)
 {
   Console.WriteLine($"Counter = {counter++}");
 
+  daprSideCarIsHealthy = await daprClient.CheckHealthAsync();
+
+  if(daprSideCarIsHealthy)
+    Console.WriteLine("Dapr side car is healthy. !!!");
+  else
+  {
+    Console.WriteLine("Alas, Alas, Dapr side car is NOT healthy !!");
+    Console.WriteLine("I am not sure why the the state store is running fine when side car is not healthy ");
+    Console.WriteLine("Need to find out.");
+  }
   await daprClient.SaveStateAsync(storeName, key, counter);
   await Task.Delay(1000);
 }
